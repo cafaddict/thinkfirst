@@ -1,6 +1,6 @@
 {
-  "name": "wf",
-  "description": "how-to-work 프레임워크. 체계적 사고 과정을 강제하여 이해의 부채를 방지한다. /wf:status로 현황 확인, /wf:0~/wf:7로 단계별 진행.",
+  "name": "tf",
+  "description": "thinkfirst — 체계적 사고 과정을 강제하여 이해의 부채를 방지한다. /tf:status로 현황 확인, /tf:0~/tf:7로 단계별 진행.",
   "version": "0.1.0",
   "author": {
     "name": "hyunyul-cho"

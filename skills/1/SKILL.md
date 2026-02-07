@@ -7,7 +7,7 @@ allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep
 
 ## 이전 단계 산출물
 
-- 0단계 문제 정의: !`cat docs/work/$(cat docs/work/.current 2>/dev/null)/0-problem-definition.md 2>/dev/null || echo "NO_FILE — /wf:0을 먼저 실행하세요."`
+- 0단계 문제 정의: !`cat docs/work/$(cat docs/work/.current 2>/dev/null)/0-problem-definition.md 2>/dev/null || echo "NO_FILE — /tf:0을 먼저 실행하세요."`
 
 ## 기존 산출물 확인
 
@@ -18,7 +18,7 @@ allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep
 이 단계의 목적은 **0단계에서 정의한 문제에 대해 측정 가능한 목표를 설정**하는 것이다.
 
 ### 전제 조건
-- 0단계 산출물이 없으면 "/wf:0을 먼저 실행하세요." 라고 안내하고 중단한다.
+- 0단계 산출물이 없으면 "/tf:0을 먼저 실행하세요." 라고 안내하고 중단한다.
 
 ### 진행 방식
 
@@ -56,4 +56,4 @@ allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep
 - 측정 불가능한 목표는 반드시 구체화하도록 사용자와 대화한다.
 - 사용자가 정한 목표를 임의로 변경하지 않는다. 제안은 하되 결정은 사용자가 한다.
 - 각 답변을 파일에 기록한 후, 기록 내용을 사용자에게 보여주고 확인을 받는다. 확인 전에 다음으로 넘어가지 않는다.
-- 이 단계가 완료되면 "다음 단계: `/wf:2`로 요구사항을 정리하세요." 라고 안내한다.
+- 이 단계가 완료되면 "다음 단계: `/tf:2`로 요구사항을 정리하세요." 라고 안내한다.
