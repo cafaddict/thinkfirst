@@ -1,6 +1,6 @@
 ---
 description: "how-to-work 6단계: 검증과 피드백. 1단계 수치 목표 대비 결과를 확인한다."
-allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep
+allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep, Task
 ---
 
 # 6단계: 검증과 피드백

@@ -1,6 +1,6 @@
 ---
 description: "how-to-work 3단계: 설계. 구조, 기술 선택, 불확실성 식별."
-allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep
+allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep, Task
 ---
 
 # 3단계: 설계
@@ -37,6 +37,13 @@ allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep
 2. 필요하면 기존 코드베이스를 탐색한다 (Glob, Grep, Read 사용).
 
 3. 구조를 사용자에게 보여주고 합의를 구한다.
+
+#### 리서치 제안 (3-1 완료 후)
+
+구조 합의 후, 사용자에게 리서치를 제안한다:
+- "설계에 대한 기술 대안이나 기존 구현을 리서치할까요? (web-researcher, academic-researcher, codebase-analyzer 추천)"
+- 사용자가 Yes → Task 도구로 선택된 agent를 병렬 실행한다.
+- 사용자가 No → 그대로 진행.
 
 #### 3-2. 기술 선택 근거
 

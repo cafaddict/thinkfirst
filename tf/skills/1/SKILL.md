@@ -1,6 +1,6 @@
 ---
 description: "how-to-work 1단계: 측정 가능한 목표 정의."
-allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep
+allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep, Task
 ---
 
 # 1단계: 목표를 측정 가능하게 정의
@@ -31,7 +31,12 @@ allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep
    - 측정 방법이 명확한지 확인한다. ("어떻게 측정할 건가요?")
    - 목표가 여러 개면 우선순위를 정한다.
 
-4. 최종 목표 목록을 사용자에게 보여주고 합의를 구한다.
+4. **목표 초안이 작성된 후**, 사용자에게 리서치를 제안한다:
+   - "목표의 벤치마크나 업계 기준을 리서치할까요? (web-researcher 추천)"
+   - 사용자가 Yes → Task 도구로 선택된 agent를 실행한다.
+   - 사용자가 No → 그대로 진행.
+
+5. 최종 목표 목록을 사용자에게 보여주고 합의를 구한다.
 
 ### 산출물 파일 형식
 

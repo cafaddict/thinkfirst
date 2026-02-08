@@ -1,6 +1,6 @@
 ---
 description: "how-to-work 7단계: 정리 및 마무리. 리팩토링, 문서화, 운영 점검."
-allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep
+allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep, Task
 ---
 
 # 7단계: 정리 및 마무리

@@ -1,6 +1,6 @@
 ---
 description: "how-to-work 2단계: 요구사항 정리 및 범위 고정."
-allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep
+allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep, Task
 ---
 
 # 2단계: 요구사항 정리 (범위 고정)
@@ -34,9 +34,14 @@ allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep
    - **Should** — 있으면 확실히 좋음
    - **Nice to have** — 이번 범위에서는 제외
 
-5. 반드시 **"이번에 안 할 것"** 목록을 명시적으로 작성한다. 사용자에게 "이번에 명시적으로 제외할 것이 있나요?" 라고 질문한다.
+5. **Must 목록 초안이 작성된 후**, 사용자에게 리서치를 제안한다:
+   - "요구사항에 대해 기존 구현이나 경쟁 제품을 리서치할까요? (codebase-analyzer, competitor-analyst 추천)"
+   - 사용자가 Yes → Task 도구로 선택된 agent를 병렬 실행한다.
+   - 사용자가 No → 그대로 진행.
 
-6. 최종 분류 결과를 사용자에게 보여주고 합의를 구한다.
+6. 반드시 **"이번에 안 할 것"** 목록을 명시적으로 작성한다. 사용자에게 "이번에 명시적으로 제외할 것이 있나요?" 라고 질문한다.
+
+7. 최종 분류 결과를 사용자에게 보여주고 합의를 구한다.
 
 ### 산출물 파일 형식
 

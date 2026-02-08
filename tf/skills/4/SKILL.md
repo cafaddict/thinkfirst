@@ -1,6 +1,6 @@
 ---
 description: "how-to-work 4단계: 작업 단위 분해. 실행 가능한 작업 목록 생성."
-allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep
+allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep, Task
 ---
 
 # 4단계: 작업 단위 분해

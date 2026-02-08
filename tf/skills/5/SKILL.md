@@ -1,6 +1,6 @@
 ---
 description: "how-to-work 5단계: MVP/Spike 구현. 최소 기능 구현으로 설계 가설을 검증한다."
-allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep
+allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep, Task
 ---
 
 # 5단계: 최소 기능 구현 (MVP / Spike)
@@ -38,17 +38,22 @@ allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep
 
 5. 기록된 파일 내용을 사용자에게 보여주고 **확인을 받는다.** 사용자가 승인하기 전에는 구현에 들어가지 않는다.
 
-6. 사용자 승인 후 구현을 진행한다.
+6. **구현 시작 전**, 사용자에게 리서치를 제안한다:
+   - "구현에 앞서 관련 패턴이나 구현 사례를 리서치할까요? (codebase-analyzer, web-researcher 추천)"
+   - 사용자가 Yes → Task 도구로 선택된 agent를 병렬 실행한다.
+   - 사용자가 No → 그대로 진행.
+
+7. 사용자 승인 후 구현을 진행한다.
    - 완벽함보다 동작 우선
    - 하드코딩 허용
    - 최적화는 나중에
 
-7. **구현 진행 중 발견 사항이 있을 때마다** 즉시 파일을 업데이트한다:
+8. **구현 진행 중 발견 사항이 있을 때마다** 즉시 파일을 업데이트한다:
    - 설계 가설이 맞았는지/틀렸는지
    - 예상 못한 문제
    - 설계 수정이 필요한 부분
 
-8. MVP 구현이 끝나면 결과를 사용자에게 보여주고 합의를 구한다.
+9. MVP 구현이 끝나면 결과를 사용자에게 보여주고 합의를 구한다.
 
 ### 산출물 파일 형식
 

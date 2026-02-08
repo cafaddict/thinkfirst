@@ -1,6 +1,6 @@
 ---
 description: "how-to-work 0단계: 문제 정의. 왜 이 작업을 하는지 정의한다."
-allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep
+allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep, Task
 ---
 
 # 0단계: 문제 정의 — "이걸 왜 하는가?"
@@ -31,11 +31,16 @@ allowed-tools: Edit, Write, Read, AskUserQuestion, Bash, Glob, Grep
 
 3. **각 질문의 답변을 받을 때마다** 즉시 파일의 해당 섹션을 업데이트한다. 다음 질문으로 넘어가기 전에 파일에 반영한다.
 
-4. 모든 질문이 끝나면, 답변을 종합하여 **문제 정의 문장 1~2줄**을 작성한다.
+4. **"지금 무엇이 불편한가?" 답변 후**, 사용자에게 리서치를 제안한다:
+   - "이 문제에 대한 기존 솔루션을 리서치할까요? (web-researcher, competitor-analyst 추천)"
+   - 사용자가 Yes → `/tf:research`를 안내하거나, 직접 Task 도구로 선택된 agent를 병렬 실행한다.
+   - 사용자가 No → 그대로 다음 질문 진행.
+
+5. 모든 질문이 끝나면, 답변을 종합하여 **문제 정의 문장 1~2줄**을 작성한다.
    - 형식: "현재 XXX는 YYY 때문에 ZZZ가 불가능하다."
    - 이 문장을 사용자에게 보여주고 합의를 구한다.
 
-5. 합의된 문제 정의 문장을 파일 상단에 기록한다.
+6. 합의된 문제 정의 문장을 파일 상단에 기록한다.
 
 ### 산출물 파일 형식
 
