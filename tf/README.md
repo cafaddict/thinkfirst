@@ -1,17 +1,13 @@
-# wf — how-to-work workflow plugin for Claude Code
+# thinkfirst — how-to-work workflow plugin for Claude Code
 
 체계적 사고 과정을 강제하여 이해의 부채를 방지하는 Claude Code 플러그인.
+리서치 agent team이 각 단계에서 기존 솔루션·논문·코드베이스를 자동 조사합니다.
 
 ## 설치
 
 ```bash
-claude plugin add /path/to/wf
-```
-
-또는 로컬 테스트:
-
-```bash
-claude --plugin-dir /path/to/wf
+claude plugin marketplace add https://github.com/cafaddict/cafaddict-claude-marketplace.git
+claude plugin install tf@cafaddict-claude-marketplace
 ```
 
 ## 사용법
@@ -36,6 +32,26 @@ claude --plugin-dir /path/to/wf
 | `/tf:5` | `/tf:mvp` | 최소 기능 구현 (MVP/Spike) |
 | `/tf:6` | `/tf:verify` | 검증과 피드백 |
 | `/tf:7` | `/tf:wrapup` | 정리 및 마무리 |
+| `/tf:research` | — | 리서치 오케스트레이터 (아무 시점에서나 호출) |
+
+### 리서치 Agent Team
+
+`/tf:research`를 호출하면 여러 전문가 agent가 병렬로 리서치를 수행합니다:
+
+| Agent | 역할 | 모델 |
+|-------|------|------|
+| `web-researcher` | 웹 검색 (솔루션, 라이브러리, 블로그) | sonnet |
+| `academic-researcher` | 논문, 알고리즘, 학술 자료 조사 | sonnet |
+| `codebase-analyzer` | 현재 프로젝트 코드베이스 분석 | sonnet |
+| `competitor-analyst` | 경쟁 제품, 대안 비교 분석 | sonnet |
+| `research-synthesizer` | 결과 종합, 충돌/모순 정리 | opus |
+
+- 사용자가 **어떤 agent를 실행할지 선택** 가능
+- 선택된 agent들이 **병렬 실행** 후 synthesizer가 종합
+- 결과는 `docs/work/{버전}/research/{주제}/` 에 파일로 저장
+- 해당 단계 산출물에 종합 요약이 자동 연결
+
+각 단계(0, 1, 2, 3, 5) 진행 중에도 적합한 시점에서 리서치를 제안합니다.
 
 ### 이터레이션
 
@@ -43,13 +59,20 @@ claude --plugin-dir /path/to/wf
 
 ```
 docs/work/
-├── v0/              ← 첫 번째 사이클
+├── v0/                          ← 첫 번째 사이클
 │   ├── 0-problem-definition.md
 │   ├── 1-goals.md
+│   ├── ...
+│   └── research/                ← 리서치 결과
+│       └── {주제}/
+│           ├── web-researcher.md
+│           ├── academic-researcher.md
+│           ├── codebase-analyzer.md
+│           ├── competitor-analyst.md
+│           └── synthesis.md
+├── v1/                          ← 두 번째 사이클
 │   └── ...
-├── v1/              ← 두 번째 사이클
-│   └── ...
-└── .current         ← "v1" (현재 진행 중인 버전을 가리키는 텍스트 파일)
+└── .current                     ← "v1" (현재 버전 텍스트 파일)
 ```
 
 `/tf:status`에서 이터레이션 완료 시 새 버전을 시작할 수 있습니다.
