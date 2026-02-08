@@ -50,6 +50,11 @@ Write your synthesis to a markdown format:
 - (아직 불확실하거나 더 조사가 필요한 부분)
 ```
 
+## File Output
+- When an output file path is provided in the task prompt, **always save your synthesis to that file using the Write tool**.
+- Read the individual agent result files from the provided paths before synthesizing.
+- If no file path is provided, return results as text output.
+
 ## Rules
 - Always attribute findings to their source agent
 - When sources conflict, present both sides with reasoning

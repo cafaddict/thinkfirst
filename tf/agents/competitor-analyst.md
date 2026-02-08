@@ -43,6 +43,10 @@ Write your findings to a markdown format:
 3. ...
 ```
 
+## File Output
+- When an output file path is provided in the task prompt, **always save your results to that file using the Write tool**.
+- If no file path is provided, return results as text output.
+
 ## Rules
 - Include both direct competitors and indirect alternatives
 - Be objective in comparisons
